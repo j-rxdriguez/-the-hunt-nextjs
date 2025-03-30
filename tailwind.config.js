@@ -1,7 +1,9 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
+    './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
@@ -11,9 +13,9 @@ module.exports = {
       },
     },
   },
-  darkMode: 'media', // Enables dark mode based on system preferences
-  plugins:[require("daisyui")],
-}
-
-    
-  
+  darkMode: 'media',
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["light", "dark", "cupcake"], // Add more themes if needed
+  },
+};

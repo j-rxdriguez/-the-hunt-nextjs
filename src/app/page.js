@@ -49,14 +49,15 @@ export default function Home() {
         <h2 className="text-4xl font-bold mt-8">The Ultimate Geocaching Challenge!</h2>
         <p className="mt-4 text-lg text-center">Ready for an adventure? Join The Hunt, a thrilling game where you can win real prize money by solving clues, following hidden maps, and discovering a geocache in the real world. All you need is your wits and a sense of adventure!</p>
         <div className="mt-8 flex gap-4">
-          <a href="#about" className="btn">Learn more</a>
-          <a href="#signup" className="btn">Sign Up</a>
+          <a href="#about" className="btn btn-neutral">Learn more</a>
+          <a href="#signup" className="btn btn-soft">Sign Up</a>
         </div>
       </section>
 
       {/* About the Game Section */}
       <section id="about" className="flex flex-col items-center justify-center h-screen p-8 sm:p-20 bg-gray-100 dark:bg-gray-800">
         <h2 className="text-3xl font-semibold">How It Works:</h2>
+        <img src="/images/rules.png" alt="Rules of the" className="w-20 h-auto" />
         <p className="mt-4 text-lg text-center max-w-2xl">
           Sign Up & Pay
           To enter, simply sign up and pay a small entry fee. You’ll receive a unique participant ID to track your progress throughout the game.
@@ -86,7 +87,16 @@ export default function Home() {
           <button type="submit" className="btn mt-4">Sign Up</button>
         </form>
       </section>
-    </div>
+      <div className="flex justify-center mt-8">
+      <Link href="/">
+      <button className="btn btn-soft btn-accent">Back to Top</button>
+      </Link>
+      </div>
+
+      </div>
+     
+
+
   );
 }
 
