@@ -2,7 +2,25 @@
 import Link from "next/link";
 import '../../styles/globals.css';
 
+'use client';
+import { useUser } from '@auth0/nextjs-auth0/client';
 
+export default function Navbar() {
+  const { user } = useUser();
+
+  return (
+    <nav>
+      {!user ? (
+        <a href="/api/auth/login">Login</a>
+      ) : (
+        <>
+          <a href="/api/auth/logout">Logout</a>
+          <img src={user.picture} alt={user.name} />
+        </>
+      )}
+    </nav>
+  );
+}
 
 export default function Navbar() {
   return (
